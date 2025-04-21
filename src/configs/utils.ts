@@ -89,3 +89,27 @@ export const replaceFile = async (
     consola.error(`Error setting up ${fileName} config:`, error);
   }
 };
+
+export const replaceHomeConfigFile = async (
+  configDir: string,
+  fileName: string,
+) => {
+  await replaceConfigFile(HomePath, configDir, fileName);
+};
+
+export const replaceConfigFile = async (
+  targetPath: string,
+  configDir: string,
+  fileName: string,
+) => {
+  consola.info(`Setting up ${fileName}...`);
+  try {
+    const configPath = getConfigPath(`${configDir}/${fileName}`);
+    const targetFilePath = `${targetPath}/${fileName}`;
+
+    const file = Bun.file(targetFilePath);
+    await Bun.write(configPath, file);
+  } catch (error) {
+    consola.error(`Error setting up ${fileName} config:`, error);
+  }
+};

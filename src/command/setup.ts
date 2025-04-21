@@ -9,8 +9,6 @@ import { generateBackupKey, isUnlocked } from '../configs/utils';
 import { setupVSCode } from '../configs/vscode';
 import { setupZsh } from '../configs/zsh';
 
-const TARGETS = ['brew', 'ssh', 'git', 'oh-my-posh', 'vscode', 'mise', 'zsh'];
-
 interface SetupOptions {
   target?: string[];
   exclude?: string[];
@@ -29,7 +27,15 @@ const setupCommand = (program: Command) => {
         return;
       }
 
-      let targets = TARGETS;
+      let targets = [
+        'brew',
+        'ssh',
+        'git',
+        'oh-my-posh',
+        'vscode',
+        'mise',
+        'zsh',
+      ];
       if (options.target && options.target.length > 0) {
         targets = targets.filter((target) => options.target?.includes(target));
       }
@@ -42,7 +48,7 @@ const setupCommand = (program: Command) => {
       const backupKey = generateBackupKey();
 
       if (targets.includes('brew')) await setupBrew();
-      if (targets.includes('ssg')) await setupSSH(backupKey);
+      if (targets.includes('ssh')) await setupSSH(backupKey);
       if (targets.includes('git')) await setupGit(backupKey);
       if (targets.includes('oh-my-posh')) await setupOhMyPosh(backupKey);
       if (targets.includes('vscode')) await setupVSCode(backupKey);

@@ -11,8 +11,6 @@ curl -fsSL https://bun.sh/install | bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # setup
 bun index.ts setup
-# 対象を絞ったり、実行除外ができる
-# bun index.ts setup -t git
 # bun index.ts setup -e ssh
 ```
 
@@ -21,4 +19,8 @@ bun index.ts setup
 ```sh
 # Bunのアップグレード
 bun upgrade
+# 設定ファイルの取り込み
+bun index.ts dump
+# 設定ファイルの適用
+bun index.ts apply
 ```

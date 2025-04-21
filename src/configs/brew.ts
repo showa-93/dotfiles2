@@ -5,5 +5,10 @@ export const setupBrew = async () => {
   await $`brew bundle --file=${getConfigPath('brew/Brewfile')}`;
 };
 
-// dump brewfile
-// brew bundle dump --no-vscode --file configs/brew/Brewfile --force
+export const dumpBrew = async () => {
+  await $`brew bundle dump --no-vscode --force --file=${getConfigPath('brew/Brewfile')}`;
+};
+
+export const applyBrew = async () => {
+  await $`brew bundle --file=${getConfigPath('brew/Brewfile')}`;
+};
