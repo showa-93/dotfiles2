@@ -22,7 +22,7 @@
     "editor.guides.bracketPairs": "active",
     "editor.formatOnSave": true,
     "hediet.vscode-drawio.resizeImages": null,
-    "hediet.vscode-drawio.theme": "Kennedy",
+    "hediet.vscode-drawio.theme": "kennedy",
     // **** error lens ****
     "errorLens.excludeBySource": [
         "compiler(UndeclaredName)"

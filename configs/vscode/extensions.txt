@@ -7,6 +7,7 @@ docker.docker
 donjayamanne.githistory
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
+fisheva.eva-theme
 foxundermoon.shell-format
 github.copilot
 github.copilot-chat
