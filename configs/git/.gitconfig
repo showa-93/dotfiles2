@@ -1,0 +1,23 @@
+[user]
+	email = shumai.1215.2018@gmail.com
+	name = showa-93
+[core]
+	editor = vim
+	quotepath = false
+[init]
+	defaultBranch = main
+[rebase]
+	autosquash = true
+	updateRefs = true
+[fsck]
+	object = true
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckobjects = true
+
+[alias]
+	pushf = push --force-with-lease --force-if-includes
+	commita = !git commit --amend --date \"$(date -R)\"

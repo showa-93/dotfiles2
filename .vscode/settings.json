@@ -1,0 +1,17 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "always",
+		"source.organizeImports.biome": "always"
+	},
+	"[typescript]": {
+		"editor.indentSize": 2,
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+	"typescript.inlayHints.enumMemberValues.enabled": false,
+	"typescript.inlayHints.parameterTypes.enabled": true,
+	"typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+	"typescript.inlayHints.variableTypes.enabled": false,
+	"typescript.inlayHints.parameterNames.enabled": "literals"
+}
