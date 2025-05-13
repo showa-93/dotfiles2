@@ -24,3 +24,7 @@ bun index.ts dump
 # 設定ファイルの適用
 bun index.ts apply
 ```
+
+## tools
+
+- [mise](https://mise.jdx.dev/lang/go.html)
