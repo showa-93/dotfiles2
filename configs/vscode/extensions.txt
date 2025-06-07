@@ -21,9 +21,11 @@ ics.japanese-proofreading
 james-yu.latex-workshop
 jebbs.plantuml
 mikestead.dotenv
+ms-azuretools.vscode-containers
 ms-azuretools.vscode-docker
 ms-ceintl.vscode-language-pack-ja
 oven.bun-vscode
+qwtel.sqlite-viewer
 redhat.vscode-yaml
 renesaarsoo.sql-formatter-vsc
 shardulm94.trailing-spaces
