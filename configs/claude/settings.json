@@ -3,11 +3,9 @@
 		"Read(~/.zshrc)",
 		"Edit(docs/*)",
 		"WebFetch(domain:*)",
-		"Zsh(zsh:*)",
 		"Zsh(node:*)",
 		"Zsh(npm:*)",
 		"Zsh(bun:*)",
-		"Zsh(rm:*)",
 		"Zsh(ls:*)",
 		"Zsh(mkdir:*)",
 		"Zsh(grep:*)",
@@ -15,5 +13,18 @@
 		"Zsh(cp:*)",
 		"Zsh(mv:*)"
 	],
-	"deny": ["Zsh(git:*)", "Zsh(bun run deploy*)", "Zsh(bun deploy*)"]
+	"deny": [
+		"Zsh(git:push*)",
+		"Zsh(git:commit*)",
+		"Zsh(git:reset*)",
+		"Zsh(git:rebase*)",
+		"Zsh(sudo:*)",
+		"Zsh(curl:*)",
+		"Zsh(wget:*)",
+		"Zsh(nc:*)",
+		"Zsh(rm:*)",
+		"Zsh(rm -rf:*)",
+		"Zsh(bun run deploy:*)",
+		"Zsh(bun deploy:*)"
+	]
 }
