@@ -1,7 +1,7 @@
 import { $ } from 'bun';
 import { HomePath, replaceConfigFile, replaceFile } from './utils';
 
-const CLAUDE_PATH = 'claude.md';
+const CLAUDE_PATH = 'CLAUDE.md';
 const SETTINGS_PATH = 'settings.json';
 
 export const setupClaude = async (backupKey: string) => {
