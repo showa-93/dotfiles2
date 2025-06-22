@@ -1,5 +1,6 @@
 import type { Command } from 'commander';
 import { applyBrew } from '../configs/brew';
+import { applyClaude } from '../configs/claude';
 import { applyGit } from '../configs/git';
 import { applyMise } from '../configs/mise';
 import { applyOhMyPosh } from '../configs/oh_my_posh';
@@ -19,7 +20,15 @@ const dumpCommand = (program: Command) => {
     .option('-t, --target [targets...]', '実行するセットアップを指定')
     .option('-e, --exclude [targets...]', '除外するセットアップを指定')
     .action(async (options: ApplyOptions) => {
-      let targets = ['brew', 'git', 'oh-my-posh', 'vscode', 'mise', 'zsh'];
+      let targets = [
+        'brew',
+        'git',
+        'oh-my-posh',
+        'vscode',
+        'mise',
+        'zsh',
+        'claude',
+      ];
       if (options.target && options.target.length > 0) {
         targets = targets.filter((target) => options.target?.includes(target));
       }
@@ -37,6 +46,7 @@ const dumpCommand = (program: Command) => {
       if (targets.includes('vscode')) await applyVSCode(backupKey);
       if (targets.includes('mise')) await applyMise(backupKey);
       if (targets.includes('zsh')) await applyZsh(backupKey);
+      if (targets.includes('claude')) await applyClaude(backupKey);
     });
 };
 

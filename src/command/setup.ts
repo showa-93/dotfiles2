@@ -1,6 +1,7 @@
 import type { Command } from 'commander';
 import consola from 'consola';
 import { setupBrew } from '../configs/brew';
+import { setupClaude } from '../configs/claude';
 import { setupGit } from '../configs/git';
 import { setupMise } from '../configs/mise';
 import { setupOhMyPosh } from '../configs/oh_my_posh';
@@ -35,6 +36,7 @@ const setupCommand = (program: Command) => {
         'vscode',
         'mise',
         'zsh',
+        'claude',
       ];
       if (options.target && options.target.length > 0) {
         targets = targets.filter((target) => options.target?.includes(target));
@@ -54,6 +56,7 @@ const setupCommand = (program: Command) => {
       if (targets.includes('vscode')) await setupVSCode(backupKey);
       if (targets.includes('mise')) await setupMise(backupKey);
       if (targets.includes('zsh')) await setupZsh(backupKey);
+      if (targets.includes('claude')) await setupClaude(backupKey);
     });
 };
 

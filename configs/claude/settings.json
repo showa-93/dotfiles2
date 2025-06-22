@@ -1,0 +1,19 @@
+{
+	"permissions": [
+		"Read(~/.zshrc)",
+		"Edit(docs/*)",
+		"WebFetch(domain:*)",
+		"Zsh(zsh:*)",
+		"Zsh(node:*)",
+		"Zsh(npm:*)",
+		"Zsh(bun:*)",
+		"Zsh(rm:*)",
+		"Zsh(ls:*)",
+		"Zsh(mkdir:*)",
+		"Zsh(grep:*)",
+		"Zsh(find:*)",
+		"Zsh(cp:*)",
+		"Zsh(mv:*)"
+	],
+	"deny": ["Zsh(git:*)", "Zsh(bun run deploy*)", "Zsh(bun deploy*)"]
+}
