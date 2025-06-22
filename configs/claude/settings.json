@@ -26,5 +26,6 @@
 		"Zsh(rm -rf:*)",
 		"Zsh(bun run deploy:*)",
 		"Zsh(bun deploy:*)"
-	]
+	],
+	"shell": "/bin/zsh"
 }
